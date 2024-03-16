@@ -1,13 +1,16 @@
-DROP TABLE IF EXISTS `ai_analysis_log`;
+DROP TABLE IF EXISTS `todos`;
 
-CREATE TABLE `ai_analysis_log` (
-`id` int(11) NOT NULL AUTO_INCREMENT,
-`image_path` varchar(255) DEFAULT NULL,
-`success` varchar(255) DEFAULT NULL,
-`message` varchar(255) DEFAULT NULL,
-`class` int(11) DEFAULT NULL,
-`confidence` decimal(5,4) DEFAULT NULL,
-`request_timestamp` int(10) unsigned DEFAULT NULL,
-`response_timestamp` int(10) unsigned DEFAULT NULL,
-PRIMARY KEY (`id`)
+CREATE TABLE `todos` (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  is_done BOOLEAN NOT NULL DEFAULT 0,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
+
+INSERT INTO todos (title, description, is_done)
+VALUES
+  ('買い物をする', '牛乳、卵、パンを買う', FALSE),
+  ('勉強する', '英語と数学の復習をする', FALSE),
+  ('メールを送る', '取引先への見積もりを送信する', FALSE);
