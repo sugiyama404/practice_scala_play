@@ -1,13 +1,7 @@
-FROM mysql:8.0.32-debian
-
-
-RUN apt-get update \
-    && apt-get -y install wget --no-install-recommends \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+FROM mysql:8.0.36-debian
 
 # 公開鍵をダウンロードする
-RUN wget https://repo.mysql.com/apt/debian/public.key | apt-key add -
+RUN curl -sSL https://repo.mysql.com/apt/debian/public.key | apt-key add -
 
 RUN apt-get update \
     && apt-get -y install locales --no-install-recommends \
