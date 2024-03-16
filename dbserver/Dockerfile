@@ -1,7 +1,7 @@
 FROM mysql:8.0.32-debian
 
 # 公開鍵をダウンロードする
-RUN curl -sSL https://repo.mysql.com/apt/debian/public.key | apt-key add -
+RUN wget https://repo.mysql.com/apt/debian/public.key | apt-key add -
 
 RUN apt-get update \
     && apt-get -y install locales --no-install-recommends \
