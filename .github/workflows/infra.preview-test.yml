@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - feature-cretate-db
     paths:
       - dbserver/**
       - .github/workflows/**
