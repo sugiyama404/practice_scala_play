@@ -1,5 +1,14 @@
 version: "3"
 services:
+  play:
+    build: ./webserver
+    container_name: play_web
+    volumes:
+      - ./webserver/opt:/root/opt
+    ports:
+      - 9000:9000
+    restart: always
+    tty: true
   db2:
     build: ./dbserver
     container_name: play_db
