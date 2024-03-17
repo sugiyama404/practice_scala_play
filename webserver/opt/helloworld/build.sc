@@ -3,7 +3,7 @@ import $ivy.`com.lihaoyi::mill-contrib-playlib:`,  mill.playlib._
 
 object helloworld extends PlayModule with SingleModule {
 
-  def scalaVersion = "2.13.13"
+  def scalaVersion = "2.13.1"
   def playVersion = "3.0.2"
   def twirlVersion = "2.0.1"
 
