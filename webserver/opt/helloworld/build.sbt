@@ -11,6 +11,8 @@ libraryDependencies += guice
 libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "7.0.0" % Test
 libraryDependencies += "mysql" % "mysql-connector-java" % "8.0.28"
 libraryDependencies += "javax.persistence" % "javax.persistence-api" % "2.2"
+libraryDependencies += "com.typesafe.play" %% "play-slick" % "5.3.0"
+libraryDependencies += "com.typesafe.play" %% "play-slick-evolutions" % "5.3.0"
 
 // Adds additional packages into Twirl
 //TwirlKeys.templateImports += "com.example.controllers._"

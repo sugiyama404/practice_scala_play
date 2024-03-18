@@ -11,11 +11,11 @@ GET     /hello                      controllers.HelloController.hello()
 POST    /hello                      controllers.HelloController.helloJson()
 # todos api
 GET /api/todos           controllers.TodoController.listTodos()
-GET /api/todos/:id       controllers.TodoController.getTodo(id: Long)
-+nocsrf
-POST /api/todos          controllers.TodoController.createTodo()
-PUT /api/todos/:id       controllers.TodoController.updateTodo(id: Long)
-DELETE /api/todos/:id    controllers.TodoController.deleteTodo(id: Long)
+# GET /api/todos/:id       controllers.TodoController.getTodo(id: Long)
+# +nocsrf
+# POST /api/todos          controllers.TodoController.createTodo()
+# PUT /api/todos/:id       controllers.TodoController.updateTodo(id: Long)
+# DELETE /api/todos/:id    controllers.TodoController.deleteTodo(id: Long)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
